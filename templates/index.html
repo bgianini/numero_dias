@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de Anos, Meses e Dias</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <h1>Calculadora de Anos, Meses e Dias</h1>
+    <form method="POST" action="/">
+        <label for="dias">Informe o número de dias:</label>
+        <input type="number" name="dias" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+    <h2>Resultado:</h2>
+    <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+
+</html>
